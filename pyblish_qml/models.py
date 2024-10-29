@@ -4,7 +4,7 @@ import logging
 
 from . import util, settings
 from .vendor import six
-from .vendor.Qt5 import QtCore
+from .vendor.Qt import QtCore
 
 
 defaults = {

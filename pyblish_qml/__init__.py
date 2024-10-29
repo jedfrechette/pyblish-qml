@@ -4,6 +4,11 @@ from .version import (
     __version__
 )
 
+import site
+from pathlib import Path
+
+site.addsitedir(Path(__file__).parent.joinpath('vendor').as_posix())
+
 
 def show(parent=None,
          targets=None,

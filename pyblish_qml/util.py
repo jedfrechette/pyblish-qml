@@ -7,7 +7,7 @@ import traceback
 from functools import wraps
 
 from .vendor import six
-from .vendor.Qt5 import QtCore
+from .vendor.Qt import QtCore
 
 _timers = {}
 _defer_threads = []
