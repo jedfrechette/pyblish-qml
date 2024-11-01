@@ -516,7 +516,7 @@ def _remove_googleapiclient():
     """Check if the compatibility must be maintained
 
     The Maya 2018 version tries to import the `http` module from
-    Maya2018\plug-ins\MASH\scripts\googleapiclient\http.py in stead of the
+    Maya2018/plug-ins/MASH/scripts/googleapiclient/http.py instead of the
     module from six.py. This import conflict causes a crash Avalon's publisher.
     This is due to Autodesk adding paths to the PYTHONPATH environment variable
     which contain modules instead of only packages.
@@ -549,8 +549,8 @@ def _install_unreal(use_threaded_wrapper):
         return unreal.executeInMainThreadWithResult(func, *args, **kwargs)
     sys.stdout.write("Setting up Pyblish QML in Unreal\n")
     _common_setup("Unreal", threaded_wrapper, use_threaded_wrapper)
-    
-    
+
+
 def _install_maya(use_threaded_wrapper):
     """Helper function to Autodesk Maya support"""
     from maya import utils, cmds
