@@ -234,21 +234,25 @@ Item {
     Connections {
         target: app
 
-        onError: setMessage(message)
-        onInfo: setMessage(message)
+        function onError () {
+            setMessage(message)
+        }
+        function onInfo () {
+            setMessage(message)
+        }
 
-        onFirstRun: {
+        function onFirstRun () {
             app.commentEnabled ? commentBox.up() : null
             commentBox.text = app.comment("Context")
         }
 
-        onCommented: {
+        function onCommented () {
             if (name == "Context") {
                 commentBox.text = app.comment(name)
             }
         }
 
-        onStateChanged: {
+        function onStateChanged () {
             if (state == "ready") {
                 overview.state = ""
                 setMessage("Ready")

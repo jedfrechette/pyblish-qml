@@ -142,6 +142,8 @@ Column {
 
     Connections {
         target: app.resultModel
-        onAdded: listView.positionViewAtEnd()
+        function onAdded () {
+         listView.positionViewAtEnd()
+        }
     }
 }
